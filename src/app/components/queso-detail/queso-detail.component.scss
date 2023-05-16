@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 600px;
+}
+
+
+p {
+  text-align: justify;
+}
+.image-container {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-container {
+  flex: 2;
+  margin-left: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    height: max-content;
+  }
+
+  .image-container {
+    margin: 0 auto;
+  }
+
+  .content-container {
+    margin: 1rem 0;
+  }
+}

@@ -1,0 +1,28 @@
+<mat-toolbar class="toolbar-color py-5 mb-4" style="background-color: #673ab7">
+  <span class="center">CATALOGO</span>
+</mat-toolbar>
+<div class="container">
+  <div
+    fxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayoutAlign="space-around center"
+    fxLayoutGap="25px"
+  >
+    <mat-card
+      *ngFor="let queso of quesos"
+      fxFlex="calc(33%-25px)"
+      class="card-style"
+      (click)="onCardClick($event)"
+      routerLink="/detail/{{ queso.id }}"
+    >
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title style="color: #673ab7">{{ queso.title }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="queso.url" alt="Photo of {{ queso.title }}" />
+      <mat-card-content> </mat-card-content>
+    </mat-card>
+    <hr />
+  </div>
+</div>
+<app-footer></app-footer>

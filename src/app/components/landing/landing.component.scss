@@ -1,0 +1,97 @@
+.carousel-item {
+  height: 90vh;
+  min-height: 350px;
+  background-size: contain;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-item.active {
+  filter: brightness(0.6); /* Adjust the value as needed */
+}
+
+agm-map {
+  height: 300px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  height: 3px;
+  background-color: #673ab7;
+}
+
+footer {
+  background-color: #673ab7 !important;
+}
+
+.video-responsive {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 500px;
+}
+
+.mat-card-title {
+  display: block;
+  margin-bottom: 18px;
+}
+p {
+  font-size: larger;
+}
+.google-iframe {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 500px;
+}
+
+.ubicacion h2 {
+  text-align: center;
+}
+
+.video-responsive {
+  display: flex;
+  justify-content: center;
+}
+h3 {
+  color: #673ab7;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+section {
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.grid-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}

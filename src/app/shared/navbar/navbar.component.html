@@ -1,0 +1,122 @@
+<div fxLayout="column" fxFlexFill>
+  <mat-toolbar
+    class="navbar-color mat-elevation-z8 p-0"
+    fxLayout="row"
+    fxLayoutAlign="start stretch"
+    style="z-index: 2"
+  >
+    <button mat-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <button
+      mat-button
+      routerLink="/landing"
+      routerLinkActive="router-link-active"
+    >
+      <mat-icon>home</mat-icon>
+    </button>
+
+    <div
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      fxLayoutGap="15px"
+      class="pl-3"
+    >
+      <span fxHide fxShow.xs></span>
+      <span fxHide fxShow.sm>La Quesería de Azu</span>
+      <span fxHide fxShow.md>La Quesería de Azu</span>
+      <span fxHide fxShow.lg>La Quesería de Azu</span>
+      <span fxHide fxShow.xl>La Quesería de Azu</span>
+    </div>
+
+    <span fxFlex></span>
+
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+      <button
+        mat-button
+        routerLink="/catalogo"
+        routerLinkActive="router-link-active no-border"
+      >
+        Catalogo
+      </button>
+      <button
+        mat-button
+        routerLink="/page3"
+        routerLinkActive="router-link-active no-border"
+      >
+        Nosotros
+      </button>
+<!--       <button
+        mat-button
+        routerLink="/page5"
+        routerLinkActive="router-link-active no-border"
+      >
+        Contacto
+      </button> -->
+    </div>
+  </mat-toolbar>
+
+  <mat-drawer-container fxFlex autosize class="background">
+    <mat-drawer #drawer>
+      <div fxLayout="column">
+        <button
+          mat-button
+          routerLink="/landing"
+          routerLinkActive="selected no-border txt-bold"
+          fxLayoutAlign="start"
+          class="py-2 pr-5"
+        >
+          <mat-icon class="mr-2">label_important</mat-icon>Home
+        </button>
+        <mat-divider></mat-divider>
+        <button
+          mat-button
+          routerLink="/catalogo"
+          routerLinkActive="selected no-border txt-bold"
+          fxLayoutAlign="start"
+          class="py-2 pr-5"
+        >
+          <mat-icon class="mr-2">label_important</mat-icon>Catalogo
+        </button>
+        <mat-divider></mat-divider>
+        <button
+          mat-button
+          routerLink="/page3"
+          routerLinkActive="selected no-border txt-bold"
+          fxLayoutAlign="start"
+          class="py-2 pr-5"
+        >
+          <mat-icon class="mr-2">label_important</mat-icon>Nosotros
+        </button>
+        <mat-divider></mat-divider>
+<!--         <button
+          mat-button
+          routerLink="/page5"
+          routerLinkActive="selected no-border txt-bold"
+          fxLayoutAlign="start"
+          class="py-2 pr-5"
+        >
+          <mat-icon class="mr-2">label_important</mat-icon>Contacto
+        </button> -->
+        <mat-divider></mat-divider>
+      </div>
+    </mat-drawer>
+
+    <!--PAGES-->
+    <div style="display: inline">
+      <router-outlet></router-outlet>
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+      />
+      <a
+        href="https://wa.me/573143604445?text=Hola%20buen%20dia!%20me%20gustaría%20tener%20información%20sobre%20la%20Quesería%20de%20Azu!%20"
+        class="float"
+        target="_blank"
+      >
+        <i class="fa fa-whatsapp my-float"></i>
+      </a>
+    </div>
+  </mat-drawer-container>
+</div>
