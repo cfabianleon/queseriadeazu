@@ -9,10 +9,6 @@
   background-size: cover;
 }
 
-.carousel-item.active {
-  filter: brightness(0.6); /* Adjust the value as needed */
-}
-
 agm-map {
   height: 300px;
 }
@@ -94,4 +90,8 @@ section {
 mat-card-actions {
   display: flex;
   justify-content: center;
+}
+
+.container{
+  padding-top: 10px;
 }

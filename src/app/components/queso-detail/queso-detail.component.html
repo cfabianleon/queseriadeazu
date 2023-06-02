@@ -1,24 +1,33 @@
-<div class="detail">
-  <mat-toolbar
-    class="toolbar-color py-5 mb-4"
-    style="background-color: #673ab7"
-  >
-    <span class="center">{{ quesoDetail?.title }}</span>
-  </mat-toolbar>
-  <mat-card-actions style="display: flex; justify-content: center">
-    <button mat-raised-button color="basic" routerLink="/catalogo">
-      <span class="material-icons">arrow_back</span>volver al catalogo
-    </button>
-  </mat-card-actions>
+<!-- Add an anchor element with id="top" -->
+<mat-toolbar
+  id="top"
+  class="toolbar-color py-5 mb-4"
+  style="background-color: #673ab7"
+>
+  <span class="center">Detalle</span>
+</mat-toolbar>
 
-  <div class="container">
+<!-- Rest of your component's HTML code -->
+<h2 style="text-align: center; color: #673ab7">{{ quesoDetail?.title }}</h2>
+<div class="container">
+  <div class="content-container">
     <div class="image-container">
       <img src="{{ quesoDetail?.url }}" alt="queso-image" />
     </div>
-    <div class="content-container">
+    <div class="text-container">
       <p>{{ quesoDetail?.content }}</p>
     </div>
   </div>
 </div>
 
+<div class="button-container">
+  <button
+    mat-raised-button
+    color="basic"
+    style="color: #673ab7"
+    routerLink="/catalogo"
+  >
+    <span class="material-icons" style="color: #673ab7">arrow_back</span>Volver
+  </button>
+</div>
 <app-footer></app-footer>
