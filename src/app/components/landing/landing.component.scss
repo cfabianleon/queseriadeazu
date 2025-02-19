@@ -95,3 +95,37 @@ mat-card-actions {
 .container{
   padding-top: 10px;
 }
+
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 325px; /* Keep it consistent */
+  margin: auto;
+}
+
+.tiktok-video {
+  width: 100%;
+  max-width: 325px;
+  height: 575px;
+  overflow: hidden; /* Hides extra content */
+  border: none; /* Removes border */
+}
+/* YouTube Video (Match TikTok Height) */
+.youtube-wrapper {
+  position: relative;
+  width: 100%;
+  height: 575px; /* Match TikTok height */
+}
+
+.youtube-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; /* Rounded edges for a cleaner look */
+}

@@ -14,11 +14,25 @@ export class LandingComponent implements OnInit {
 
   @Input() videoId?: string;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
   getSourceURL() {
     return this.sanitizer.bypassSecurityTrustResourceUrl(
       'https://www.youtube.com/embed/3_Yd6tjJKSo?start=290'
     );
   }
+
+
+  loadTikTokEmbed() {
+    const script = document.createElement('script');
+    script.src = "https://www.tiktok.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+  
+
+
+  
 }
